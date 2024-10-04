@@ -62,28 +62,32 @@ dt.predict([[0.5,0.8,9,260,6,0,1,2]])
 
 ## Output:
 ### Data head:
-![headmlexp4](https://github.com/JananiSoundararajan/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/119477549/2d80e64d-2af6-4896-9fb1-c528cebc4c7e)
+![image](https://github.com/user-attachments/assets/421dbe07-8c08-41c0-85bf-b644608a1a1f)
 
 ### Data info:
-![infomlexp6](https://github.com/JananiSoundararajan/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/119477549/766d43af-4734-4928-9e8d-0eaaccec3d42)
+![image](https://github.com/user-attachments/assets/db783fa0-2d5f-4597-8fc3-504eedd00e26)
+
 
 ### Null values:
-![null values](https://github.com/JananiSoundararajan/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/119477549/e478eda7-e031-4d65-9c93-bb94dcadbe75)
+![image](https://github.com/user-attachments/assets/cb052405-a2fc-4163-bc56-076f3b361b9b)
 
-### Values Count in Left Column:
-![valexp6](https://github.com/JananiSoundararajan/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/119477549/a286317e-2ec9-4897-8fdb-47a9e3c1be89)
+
 
 ### Dataset transformed head:
-![shsk](https://github.com/JananiSoundararajan/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/119477549/26be2a72-d417-4878-9d85-fd97ab8b40c4)
+![image](https://github.com/user-attachments/assets/54b7bea5-09ef-4584-92d9-4ded3ee077a1)
+
 
 ### x.head():
-![xheadexp6](https://github.com/JananiSoundararajan/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/119477549/ffd3a395-b744-417a-a69a-dc16f4f0e61d)
+![image](https://github.com/user-attachments/assets/04e0c19c-e8fe-42f7-b25c-cb69b4c177e2)
+
 
 ### Accuracy:
-![accuracyexp6](https://github.com/JananiSoundararajan/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/119477549/5d62da04-811f-4df6-8454-d19f29267430)
+![image](https://github.com/user-attachments/assets/bb0b07a6-4113-42da-89bb-fd3a6204faf5)
+
 
 ### Data Prediction:
-![;lkj](https://github.com/JananiSoundararajan/Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn/assets/119477549/396d9606-b88c-4d39-954a-46ab380ad9d8)
+![image](https://github.com/user-attachments/assets/1b4011bb-65b7-4a48-a5b1-c107d70db1ac)
+
 
 
 ## Result:

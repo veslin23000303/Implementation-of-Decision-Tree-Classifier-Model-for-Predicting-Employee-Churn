@@ -33,7 +33,7 @@ step 10.Find the accuracy of our model and predict the require values.
 ## Program:
 ```
 Program to implement the Decision Tree Classifier Model for Predicting Employee Churn.
-Developed by: ADHITHYA PERUMAL D
+Developed by: VESLIN ANISH A
 RegisterNumber: 212222230007
 
 import pandas as pd

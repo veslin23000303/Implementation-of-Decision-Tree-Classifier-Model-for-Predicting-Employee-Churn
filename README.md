@@ -8,91 +8,65 @@ To write a program to implement the Decision Tree Classifier Model for Predictin
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-```
-1. Import pandas module and import the required data set.
-2. Find the null values and count them.
-3. Count number of left values.
-4. From sklearn import LabelEncoder to convert string values to numerical values.
-5. From sklearn.model_selection import train_test_split.
-6. Assign the train dataset and test dataset.
-7. From sklearn.tree import DecisionTreeClassifier.
-8. Use criteria as entropy.
-9. From sklearn import metrics.
-10. Find the accuracy of our model and predict the require values.
-'''
+1. Load the employee dataset and display basic information, including null values and class distribution of the `left` column.
+2. Encode the categorical `salary` column using Label Encoding.
+3. Define the features (`X`) and target (`y`) by selecting relevant columns.
+4. Split the data into training and testing sets (80-20 split).
+5. Initialize a Decision Tree Classifier with the entropy criterion and train it on the training data.
+6. Predict the target values for the test set.
+7. Calculate and display the model's accuracy.
+8. Compute and display the confusion matrix for the predictions.
+9. Predict the `left` status for a new employee sample.
+
 ## Program:
-```
+```Python
 /*
 Program to implement the Decision Tree Classifier Model for Predicting Employee Churn.
-Developed by: VESLIN ANISH A
-RegisterNumber: 212223240175
 */
+
 import pandas as pd
-df=pd.read_csv("Employee.csv")
-df
-
-df.head()
-
-df.info()
-
-df.isnull().sum()
-
-df["left"].value_counts()
-
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+data=pd.read_csv('Employee.csv')
+data.head()
+data.info()
+data.isnull().sum()
+data["left"].value_counts()
 from sklearn.preprocessing import LabelEncoder
 le=LabelEncoder()
-df["salary"]=le.fit_transform(df["salary"])
-df.head()
-
-x=df[["satisfaction_level","last_evaluation","number_project","average_montly_hours","time_spend_company","Work_accident","promotion_last_5years","salary"]]
+data["salary"]=le.fit_transform(data["salary"])
+data.head()
+x=data[['satisfaction_level','last_evaluation','number_project','average_montly_hours',
+'time_spend_company','Work_accident','left','promotion_last_5years']]
 x.head()
-
-y=df["left"]
-
-
+y=data[['left']]
+y.head()
 from sklearn.model_selection import train_test_split
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=100)
-
 from sklearn.tree import DecisionTreeClassifier
 dt=DecisionTreeClassifier(criterion="entropy")
 dt.fit(x_train,y_train)
 y_pred=dt.predict(x_test)
-
 from sklearn import metrics
 accuracy=metrics.accuracy_score(y_test,y_pred)
 accuracy
-
-
+cm=metrics.confusion_matrix(y_test,y_pred)
+cm
 dt.predict([[0.5,0.8,9,260,6,0,1,2]])
 ```
 
 ## Output:
-### Data head:
-![image](https://github.com/user-attachments/assets/421dbe07-8c08-41c0-85bf-b644608a1a1f)
+![image](https://github.com/user-attachments/assets/8c02a398-2420-4538-839c-f5dfcc6c2837)
+![image](https://github.com/user-attachments/assets/8d5b1162-7251-418b-9023-f33c1dbc88ed)
+![image](https://github.com/user-attachments/assets/4b25b691-a2d0-4fb3-982f-e0bb8273ab4c)
+![image](https://github.com/user-attachments/assets/6ed089ac-ed71-4b5c-bb90-a515b8670dbc)
+![image](https://github.com/user-attachments/assets/c345d378-5ebd-4269-8561-fb1ab8b63e64)
+![image](https://github.com/user-attachments/assets/b601c4b3-6a3d-4252-b2f9-438dbab975f8)
+![image](https://github.com/user-attachments/assets/5ad6d70d-fdeb-4622-9784-434595259c2e)
 
-### Data info:
-![image](https://github.com/user-attachments/assets/db783fa0-2d5f-4597-8fc3-504eedd00e26)
+![image](https://github.com/user-attachments/assets/692d81de-59ba-4931-90d3-f323af85d416)
 
-
-### Null values:
-![image](https://github.com/user-attachments/assets/cb052405-a2fc-4163-bc56-076f3b361b9b)
-
-
-
-### Dataset transformed head:
-![image](https://github.com/user-attachments/assets/54b7bea5-09ef-4584-92d9-4ded3ee077a1)
-
-
-### x.head():
-![image](https://github.com/user-attachments/assets/04e0c19c-e8fe-42f7-b25c-cb69b4c177e2)
-
-
-### Accuracy:
-![image](https://github.com/user-attachments/assets/bb0b07a6-4113-42da-89bb-fd3a6204faf5)
-
-
-### Data Prediction:
-![image](https://github.com/user-attachments/assets/1b4011bb-65b7-4a48-a5b1-c107d70db1ac)
+![image](https://github.com/user-attachments/assets/1b59ab37-712e-43b7-b2dc-eeb122c3104c)
+![image](https://github.com/user-attachments/assets/d54f5cf7-14f4-4938-9441-900c808b5902)
 
 
 
